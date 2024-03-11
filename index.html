@@ -3,10 +3,12 @@
 
 <head>
 
+
 <meta charset="utf-8">
-<title>Modelo de Predicción de lesiones dermatológicas</title>
+<title>Analizador de lesiones en la piel.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Online image analyzer of the three most likely diagnoses for a skin lesion.">
+
 
 
 <!--Código para evitar que el navegador almacene en caché la página-->
@@ -35,7 +37,65 @@
 
 
 <style>
-html,body,h2,h3,h4 {font-family: Helvetica, sans-serif}
+	html, body, h2, h3, h4 {
+		font-family: 'Oswald', sans-serif;
+	}
+
+	body {
+		background-color: #f5f5f5;
+		color: #333;
+		margin: 0;
+		padding: 0;
+	}
+
+	#encabezado {
+		background-color: #2c3e50;
+		color: #ecf0f1;
+		padding: 10px;
+	}
+
+	#micrositios {
+		background-color: #3498db;
+		padding: 5px;
+	}
+
+	.title {
+		margin-top: 3px;
+	}
+
+	.new-font {
+		font-weight: bold;
+		color: #27ae60;
+	}
+
+	.progress-bar {
+		background-color: #3498db;
+		color: #ecf0f1;
+		padding: 10px;
+	}
+
+	#btnn {
+		margin-top: 20px;
+	}
+
+	h2, p {
+		color: #000;
+	}
+
+	h3 {
+		color: #000;
+		font-weight: bold;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 10px;
+		line-height: 1.5;
+	}
 </style>
 
 
@@ -89,28 +149,26 @@ y se envuelve alrededor de todo el contenido de la página. -->
 
 
 
+
+
+
 <!-- Header -->
+            <div class="w3-center title adjust-fontcolor logo">
+                 <div class="w3-center">
+                        <img class="w3-round adjust-image" src="assets/logoinub.jpg" width="150" alt="">
+                </div>
 
-<div class="w3-center title adjust-fontcolor logo">
-	<div class="w3-center">
-	<img class="w3-round adjust-image" src="assets/logoinub.jpg" width="150" alt=""> 
-</div> 
-	
-
-  <h1 class="space-letters w3-text-green"><b>Modelo de Predicción de lesiones dermatológicas</b></h1>
-  
-  <h3 class="space-letters w3-text-green"><b>Desarrollar una herramienta de inteligencia artificial para predecir el tipo de lesi&oacute;n dermatol&oacute;gica, como ayuda diagnostica para identificar r&aacute;pidamente a pacientes de alta prioridad.</b></h3>
+                <h1 class="space-letters w3-text-black"><b>Modelo de Predicción de lesiones dermatológicas</b></h1>
 
 
-<div>
-<p>Autores: Maria Pilar Villate Avendano y&nbsp;Manuel Hernandez Martinez</p>
-</div>
-	
 
+                <div>
+			
+                 
+			<p>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, fue entrenado con Tensorflow. Este modelo tiene como objetivo desarrollar una herramienta de inteligencia artificial para predecir el tipo de lesión dermatológica, como ayuda diagnóstica para identificar rápidamente a pacientes de alta prioridad.</p>
+                </div>
 
-	
-</div>
-
+            </div>
 
 
 
@@ -148,13 +206,9 @@ apertura de camara o realice un llamado al método simulateClick()-->
 
 </div><!--Final del Home Page, documente los resultados obtenidos del modelo, a saber, Exactitud, Presición y Sencibilidad, dando créditos a la base de datos trabajada-->
 
-<div class='w3-padding'>
-	<h5 class="space-letters tag-font w3-text-green"><b>Caracteristicas técnicas del Modelo:</b></h5>
-	<h5 class="space-letters tag-font w3-text-green"><b>- Exactitud: 0.90 </b></h5>
-	<h5 class="space-letters tag-font w3-text-green"><b>- Presición: 0.91 </b></h5>
-	<h5 class="space-letters tag-font w3-text-green"><b>- Sencibilidad: 0.90 </b></h5>
-	<h6 class="space-letters tag-font w3-text-green"><b>El entrenamiento del modelo está basado en el conjunto de 10015 imágenes dermatoscópicas de Harvard, entrenado con Tensorflow</b></h6>
-</div>
+
+
+ 
 
 <!-- Simulamos clics en estos dos botones de carga inicial. -->
 <div class="hide">
@@ -187,28 +241,72 @@ apertura de camara o realice un llamado al método simulateClick()-->
 	<script src="jscript/predict100.js"></script> 
 	
 	
+
+
+	<!-- Estudiantes -->
+	<div>
+		<h2>Estudiantes:</h2>
+	</div>
+	<div>
+		<ul>
+			<li><strong>*</strong> Manuel Martinez</li>
+			<li><strong>*</strong> Maria Pilar Villate</li>
+			
+		</ul>
+
+	<!-- Caracteristicas del modelo -->
+	<div>
+		<h2>Caracteristicas técnicas del Modelo:</h2>
+	</div>
+	<div>
+		<ul>
+			<li><strong>Exactitud:</strong> 90%</li>
+			<li><strong>Precisión:</strong> 91%</li>
+			<li><strong>Sensibilidad:</strong> 90%</li>
+			
+	
+		   
+		</ul>
+
+	<!-- Descripción de las Lesiones -->
+	<div>
+		<h2>Descripción de las Lesiones:</h2>
+	</div>
+	<div>
+		<ul>
+			<li><strong>nv:</strong> Los nevos melanoc&iacute;ticos son neoplasias benignas de los melanocitos y
+				se presentan en una mir&iacute;ada de variantes, todas ellas incluidas en nuestra serie. Las
+				variantes pueden diferir significativamente desde el punto de vista dermatosc&oacute;pico.</li>
+			<li><strong>mel:</strong> El melanoma es una neoplasia maligna derivada de los melanocitos que puede
+				aparecer en diferentes variantes. Si se extirpa en una fase temprana, puede curarse mediante
+				una simple escisi&oacute;n quir&uacute;rgica. Los melanomas pueden ser invasivos o no invasivos (in
+				situ).</li>
+			<li><strong>bkl:</strong> La "queratosis benigna" es una clase gen&eacute;rica que incluye la
+				queratosis seborreica ("verruga senil"), el lentigo solar -que puede considerarse una variante
+				plana de la queratosis seborreica- y la queratosis de tipo liquen plano (LPLK), que corresponde
+				a una queratosis seborreica o a un lentigo solar con inflamaci&oacute;n y regresi&oacute;n.</li>
+			<!-- Agrega las descripciones para las demás lesiones -->
+			<li><strong>akiec:</strong> Las queratosis act&iacute;nicas (queratosis solares) y el carcinoma
+				intraepitelial (enfermedad de Bowen) son variantes comunes no invasivas del carcinoma de
+				c&eacute;lulas escamosas que pueden tratarse localmente sin cirug&iacute;a...</li>
+			<li><strong>Vasc:</strong> Las lesiones vasculares de la piel en el conjunto de datos van desde los
+				angiomas de cereza hasta los angioqueratomas y los granulomas piog&eacute;nicos. Las hemorragias
+				tambi&eacute;n se incluyen en esta categor&iacute;a.</li>
+			<li><strong>Df:</strong> El dermatofibroma es una lesi&oacute;n cut&aacute;nea benigna considerada
+				como una proliferaci&oacute;n benigna o una reacci&oacute;n inflamatoria a un traumatismo
+				m&iacute;nimo. Es de color marr&oacute;n y a menudo muestra una zona central de fibrosis
+				dermatosc&oacute;pica</li>
+		</ul>
+	</div>
+</div> <!-- w3-content -->
+</div>
 	
 </div> <!-- w3-content -->
 </div>
 
 
-	  <div>
-<h2>Descripci&oacute;n de las Lesiones:</h2>
-</div>
-<div>
-<ul>
-<li><strong>nv:</strong> Los nevos melanoc&iacute;ticos son neoplasias benignas de los melanocitos y se presentan en una mir&iacute;ada de variantes, todas ellas incluidas en nuestra serie. Las variantes pueden diferir significativamente desde el punto de vista dermatosc&oacute;pico.</li>
-<li><strong>mel:</strong> El melanoma es una neoplasia maligna derivada de los melanocitos que puede aparecer en diferentes variantes. Si se extirpa en una fase temprana, puede curarse mediante una simple escisi&oacute;n quir&uacute;rgica. Los melanomas pueden ser invasivos o no invasivos (in situ).</li>
-<li><strong>bkl:</strong> La "queratosis benigna" es una clase gen&eacute;rica que incluye la queratosis seborreica ("verruga senil"), el lentigo solar -que puede considerarse una variante plana de la queratosis seborreica- y la queratosis de tipo liquen plano (LPLK), que corresponde a una queratosis seborreica o a un lentigo solar con inflamaci&oacute;n y regresi&oacute;n.</li>
-<!-- Agrega las descripciones para las demás lesiones -->
-<li><strong>akiec:</strong> Las queratosis act&iacute;nicas (queratosis solares) y el carcinoma intraepitelial (enfermedad de Bowen) son variantes comunes no invasivas del carcinoma de c&eacute;lulas escamosas que pueden tratarse localmente sin cirug&iacute;a...</li>
-<li><strong>Vasc:</strong> Las lesiones vasculares de la piel en el conjunto de datos van desde los angiomas de cereza hasta los angioqueratomas y los granulomas piog&eacute;nicos. Las hemorragias tambi&eacute;n se incluyen en esta categor&iacute;a.</li>
-<li><strong>Df:</strong> El dermatofibroma es una lesi&oacute;n cut&aacute;nea benigna considerada como una proliferaci&oacute;n benigna o una reacci&oacute;n inflamatoria a un traumatismo m&iacute;nimo. Es de color marr&oacute;n y a menudo muestra una zona central de fibrosis dermatosc&oacute;pica</li>
-</ul>
-</div>
 
 
-	
 </body>
 </html>
 
